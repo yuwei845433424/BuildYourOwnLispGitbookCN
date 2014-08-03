@@ -1,55 +1,54 @@
-Installation
+安装和配置
 ============
 
 
-Setup
+安装
 -----
 
 ![capttop](img/cattop.png "Cat &bull; Install at own risk")
 
-Before we can start programming in C we'll need to install a couple of things, and set up our environment so that we have everything we need. Because C is such a universal language this should hopefully be fairly simple. Essentially we need to install two main things. A *text editor* and a *compiler*.
+在我们开始用C语言编程之前，我们需要安装一些东西和配置我们的环境。因为C是如此通用的编程语言所以这些事情应该会比较简单。实质上我们要安装两个主要的东西。一个*文本编辑器*和一个*编译器*。
 
 
-Text Editor
+文本编辑器
 -----------
 
-A text editor is a program that allows you to edit text files in a way suitable for programming.
+文本编辑器是一种让你用适合编程的方法来编辑文本文件的程序。
 
-On **Linux** the text editor I recommend is [gedit](http://projects.gnome.org/gedit/). Whatever other basic text editor comes installed with your distribution will also work well. If you are a Vim or Emacs user these are fine to use. Please don't use an IDE. It isn't required for such a small project and won't help in understanding what is going on.
+在 **Linux** 上我推荐的文本编辑器是 [gedit](http://projects.gnome.org/gedit/)。任何和你的发行版一起安装的基础的文本编辑器也可以很好的工作。如果你是一名 Vim 或者是 Emacs 的用户这些都很好。请不要使用 IDE。在这样一个小项目中并不需要它，并且不利于理解这是怎么一回事。
 
-On **Mac** A simple text editor that can be used is [TextWrangler](http://www.barebones.com/products/textwrangler/). If you have a different preference this is fine, but please don't use XCode for text editing. This is a small project and using an IDE won't help you understand what is going on.
+在 **Mac** 上一个可以使用的简单的文本编辑器是 [TextWrangler](http://www.barebones.com/products/textwrangler/)。如果你有不同的偏好也也不错，但是请不要使用 XCode 来编辑文本，这是一个小项目并且使用 IDE 不利于你理解这是怎么回事。
 
-On **Windows** my text editor of choice is [Notepad++](http://notepad-plus-plus.org/). If you have another preference this is fine. Please *don't* use *Visual Studio* as it does not have proper support for C programming. It you attempt to use it you will run into many problems.
+在 **Windows** 上我选择的文本编辑器是 [Notepad++](http://notepad-plus-plus.org/)。如果你有其他偏好的选择也不错。 请*不要*使用 *Visual Studio* 因为它对 C 语言编程没有很好的支持。如果你试图使用它你将会遇到很多问题。
 
 
-Compiler
+编译器
 --------
 
-The compiler is a program that transforms the C source code into a program your computer can run. The installation process for these is different depending on what operating system you are running.
+*编译器*是一个程序，它可以将C语言源代码转换成可以运行的程序。安装它的过程是不同的，这取决于你所运行的操作系统。
 
-Compiling and running C programs is also going to require really basic usage of the command line. This I will not cover, so I am going to assume you have at least some familiarity with using the command line. If you are are worried about this then search online for information on using it, relevant to your operating system.
+编译和运行C程序也需要一些命令行的基本用法。这方面我将不会涉及，所以我会假设你至少熟悉使用命令行， 如果你担心这方面的问题可以在网上搜索信息使用它， 这和你的操作系统有关。
 
-On **Linux** you can install a compiler by downloading some packages. If you are running Ubuntu or Debian you can install everything you need with the following command `sudo apt-get install build-essential`. If you are running Fedora or a similar Linux variant you can use this command `su -c "yum groupinstall development-tools"`.
+在 **Linux** 上你可以通过下载一些包来安装一个编译器。如果你正在使用Ubuntu 或者 Debian 你可以通过下面的命令安装你需要的东西 `sudo apt-get install build-essential`. 如果你正在使用Fedora或者一个类似的 Linux 变种你可以使用下面的命令`su -c "yum groupinstall development-tools"`.
 
-On **Mac** you can install a compiler by downloading and installing the latest version of XCode from Apple. If you are unsure of how to do this you can search online for "installing xcode" and follow any advice shown. You will then need to install the *Command Line Tools*. On Mac OS X 10.9 this can be done by running the command `xcode-select --install` from the command line. On versions of Mac OS X prior to 10.9 this can be done by going to XCode Preferences, Downloads, and selecting *Command Line Tools* for Installation.
+在 **Mac** 上你可以通过安装并下载最新版的 XCode 来安装一个编译器。如果你不确定如何做这些事你可以在网上搜索"安装xcode"并且按照这些建议来。 你需要安装*命令行工具(Command Line Tools)*. 在 Mac OS X 10.9 上可以通过从命令行运行命令 `xcode-select --install` 来完成这些. 在 Mac OS X 10.9 之前的版本可以在 XCode Preferences, Downloads, 并选择 *Command Line Tools* 来安装
 
-On **Windows** you can install a compiler by downloading and installing [MinGW.](http://www.mingw.org/") If you use the installer at some point it may present you with a list of possible packages. Make sure you pick at least `mingw32-base` and `msys-base`. Once installed you need to add the compiler and other programs to your system `PATH` variable. To do this follow [these instructions](href="http://www.computerhope.com/issues/ch000549.htm) appending the directory `;C:\MinGW\bin` to the variable called `PATH`. You can create this variable if it doesn't exist. You may need to restart `cmd.exe` for the changes to take effect. This will allow you to run a compiler from the command line `cmd.exe`. It will also install other programs which make `cmd.exe` act like a Unix command line.
+在 **Windows** 上你可以下载并安装 [MinGW.](http://www.mingw.org/")来安装一个编译器。如果你在使用安装器有时候它还会给你一个可能的包的列表。确保你至少选中了 `mingw32-base` 和 `msys-base`。一旦安装后你需要添加编辑器和其他程序的的路径到你的 `PATH` 系统变量中. 按照 [这些指令](href="http://www.computerhope.com/issues/ch000549.htm")将  `;C:\MinGW\bin` 附加到叫做 `PATH` 的系统变量中。你可以创造这个变量如果它不存在。你可能需要重启 `cmd.exe` 来应用这些改变。这将会允许你在 `cmd.exe` 的命令行中运行一个编译器。他也会安装其他程序使得`cmd.exe`表现得更像一个 Unix 命令行。
 
 
-Testing the Compiler
+测试编译器
 --------------------
 
-To test if your C compiler is installed correctly type the following into the command line.
+通过在命令行里运行下面的命令来测试你的C语言编译器是否被正确安装。
 
 `cc --version`
-
-If you get some information about the compiler version echoed back then it should be installed correctly. You are ready to go! If you get any sort of error about an unrecognised or not found command, then it is not ready. You may need to restart the command line or your computer for changes to take effect.
+如果你得到一些编译器版本信息，那么编译器应该被正确安装了。你准备好了！如果你得到任何形式的错误或是未找到命令，那么它并没有被准备好，你可能需要重启命令行或者你的电脑来使这些改变生效。
 
 
 Hello World
 -----------
 
-Now that your environment is set up, start by opening your text editor and inputting the following program. Create a directory where you are going to put your work for this book, and save this file as `hello_world.c`. This is your first C program!
+现在你的环境已经配置好了，打开你的文本编辑器并且输入下面的程序。创造一个文件夹，把这个文件保存为 `hello_world.c`。这是你的第一个C程序！
 
 ```c
 #include <stdio.h>
@@ -60,67 +59,67 @@ int main(int argc, char** argv) {
 }
 ```
 
+这些看起来也许像一大堆疯狂的符号，几乎没有意义，我将试图一步一步的解释它。
 
-This may look like a lot of crazy symbols that make very little sense. I'll try to explain it step by step.
+在第一行我们 *include* 的叫做*头(header)*。这个*声明(statement)*允许我们使用来自 `stdio.h` 的函数，这是是C语言的标准输入输出库。你可以在这段程序中看到的这个库的其中一个函数 `puts` 。
 
-In the first line we *include* what is called a *header*. This statement allows us to use the functions from `stdio.h`, the standard input and output library which comes included with C. One of the functions from this library is the `puts` function you see later on in the program.
+接下来我们*声明(declare)*一个叫做`main`的函数。这个函数被声明返回一个`int`,并且接受一个叫做`argc`的`int`和叫做`argv`的`char**`。所有的C程序都要包含这个函数。所有的程序从这个函数开始运行。
 
-Next we *declare* a function called `main`. This function is declared to output an `int`, and take as input an `int` called `argc` and a `char**` called `argv`. All C programs must contain this function. All programs start running from this function.
-
-Inside `main` the `puts` function is *called* with the argument `"Hello, world!"`. This outputs the message `Hello, world!` to the command line. The function `puts` is short for *put string*. The second statement inside the function is `return 0;`. This tells the `main` function to finish and return `0`. When a C program returns `0` this indicates there have been no errors running the program.
+在 `mian` 函数里 `puts` 函数被*调用(called)*，参数(argument)是`"Hello,world!"`。这输出 `Hello,world!` 这条信息到命令行。函数 `puts` 是 *put string* 的缩写。函数中的第二个语句是`return 0`.这告诉 `main` 函数结束并返回 0。这表示这个程序的运行没有错误。
 
 
 Compilation
 -----------
-
-Before we can run this program we need to compile it. This will produce the actual *executable* we can run on our computer. Open up the command line and browse to the directory that `hello_world.c` is saved in. You can then compile your program using the following command.
+在我们运行这个成寻之前我们需要编译它，这将产生真正可以在我们电脑上运行的 *可执行文件(executable)*。打开命令行并浏览至 `hello_world.c` 保存的文件夹。你可以执行下面的命令来编译你的程序
 
 `cc -std=c99 -Wall hello_world.c -o hello_world`
 
-This compiles the code in `hello_world.c`, reporting any warnings, and outputs the program to a new file called `hello_world`. We use the `-std=c99` flag to tell the compiler which *version* or *standard* of C we are programming with. This lets the compiler ensure our code is standardized, so that people with different operating systems or compilers will be able to use our code.
+这将编译 `hello_world.c` 里的代码，报告任何一个警告(warning),并且输出程序为一个叫做 `hello_world` 的新文件。我们用 `std=c99` 标记(flag)来告诉编译器我们在用C语言的哪一个*版本(version)*或者*标准(standard)*。这让编译器确信我们的代码是标准化的，所以用不同操作系统和编译器的人可以使用我们的代码。
 
-If successful you should see the output file in the current directory. This can be run by typing `hello_world` (or just `hello_world` on Windows). If everything is correct you should see a friendly `Hello, world!` message appear.
+如果成功你应该看到当前文件夹输出的文件。你可以输入 `./hello_world`(或者`hello_world`在 Windows 下)。如果没有什么错误的话你应该可以看到一个友好的 `Hello,world!` 消息出现。
 
-**Congratulations!** You've just compiled and run your first C program.
+**祝贺！** 你已经编译运行了你的第一个C语言程序
 
 
-Errors
+错误
 ------
+如果有一些错误你的C语言程序编译过程可能会失败。这些问题的范围可能从简单的语法错误到其他难以理解的复杂错误。
 
-If there are some problems with your C program the compilation process may fail. These issues can range from simple syntax errors, to other complicated problems that are hard to understand.
-
-Sometimes the error message from the compiler will make sense, but if you are having trouble understanding it try searching online for it. You should see if you can find a concise explanation of what it means, and work out how to correct it. Remember this: there are many people before you who have struggled with exactly the same problems.
+有时候编译器的错误信息可能会有意义，但是难以理解你可以尝试在网上搜索它。你应该看看能不能找到一个简洁的解释，并找出如何改正它。记住这一点：有很多人都曾面临和你一样的问题。
 
 ![smash](img/smash.png "Rage &bull; A poor debugging technique")
 
-Sometimes there will be many compiler errors stemming from one source. Always work through compiler errors from first to last.
+有时候很多错误源于一个源头。所以你最好总是从第一个问题处理起。
 
-Sometimes the compiler will compile a program, but when you run it it will crash. Debugging C programs in this situation is hard. It can be an art far beyond the scope of this book.
+有时候编译器会编译一个程序，但是当你运行它的时候程序会崩溃。调试(Debug) C程序在这种情况下很困难。它是一种艺术，远远超出了这本书的范围。
 
-My first port of call for debugging a crashing C program is to print out lots of information as the program is running. Using this method I can try to isolate exactly what part of the code is incorrect and what, if anything, is going wrong up until the crash. For beginners I would recommend this technique. It is a debugging technique which is *active*. This is the important thing. As long as you are doing *something*, and not just staring at the code, the process is less painful and the temptation to give up is lessened.
+如果你是一名初学者，我常用的调试一个崩溃的C程序的办法是在它还在运行时输出大量的信息。用这种方法你可以试着分离代码的哪一部分是正确的和是否有哪部分出了什么错误。对于初学者我推荐这项技术。这是一种*敏捷(active)*的调试方法。这是件很重要的事。只要你在做一些事，而不是只是盯着代码，这个过程就不会那么痛苦，放弃的欲望就减小了。
 
-For people feeling more confident a program called `gdb` can be used to debug your C programs. This can be difficult and complicated to use, but it is also very powerful and can give you extremely valuable information and what went wrong and where. Information on how to use `gdb` can be found online.
+> 第一句的原文是:If you are a beginner, my first port of call for debugging a crashing C program would be to print out lots of information as the program is running. 
+> 不知道 first port of 在这里怎么翻译，若有知道请告知
 
-On **Mac** the most recent versions of OS X don't come with `gdb`. Instead you can use `lldb` which does largely the same job.
+对于更加自信的人来说一个叫做 `gdb` 的程序可以用来调试你的C程序。这可能很复杂难用，但是它也很强大而且能给你非常有价值的信息和错误以及产生错误的位置。关于如何使用 `gdb` 的信息可以在网络上找到。
 
-On **Linux** or **Mac** `valgrind` can be used to aid the debugging of memory leaks and other more nasty errors. Valgrind is a tool that can save you hours, or even days, of debugging. It does not take much to get proficient at it, so investigating it is highly recommended. Information on how to use it can be found online.
+在 Mac 上最新版本的 OS X 没有自带 `gdb`。作为替代你可以用 `lldb` 做同样的工作。
+
+在 **Linux** 或者 **Mac** `valgrind` 可以帮助调试内存泄露和其他更严重的错误。Valgrind 是一个可以节约你数小时，甚至数天调试时间的工具。它并不难学会，所以强烈建议研究一下它。关于如何使用的信息可以在网上找到。
 
 
-Documentation
+文档
 -------------
-
-Through this book you may come across functions in some example code that you don't recognize. You might wonder what it does. In this case you will want to look toward the [online documentation](http://en.cppreference.com/w/c) of the standard library. This will explain all the functions included in the standard library, what they do, and how to use them.
+在这本书中你可能会遇到你不认识的一些函数或者一些示例代码。你可能会想这是什么。在这种情况下看看这些标准库的[在线文档](http://en.cppreference.com/w/c)。这可以解释标准库的所有函数，它们做了什么，和怎么用它们。
 
 
 Reference
 ---------
 
 <div class="alert alert-warning">
-  **What is this section for?**
+  **这一节是干什么的?**
 
-  In this section I&#39;ll link to the code I've written for this particular chapter of the book. When finishing with a chapter your code should probably look similar to mine. This code can be used for reference if the explanation has been unclear.
+在这一节我会链接到我特别为这一章所写的代码。当完成了一章后你的代码看起来会跟我的相似。这个代码可以作为参考如果解释的不够清楚。
 
-  If you encounter a bug please do not copy and paste my code into your project. Try to track down the bug yourself and use my code as a reference to highlight what may be wrong, or where the error may lie.
+如果遇到 bug 请不要复制粘贴我的代码进你的工程。尝试自己找出 bug 并且用我的代码作为参考来突出什么是错的和错误在哪。
+
 </div>
 
 <div class="panel-group alert alert-warning" id="accordion">
@@ -148,24 +147,26 @@ int main(int argc, char** argv) {
 </div>
 
 
-Bonus Marks
+加分
 -----------
 
 <div class="alert alert-warning">
-  **What is this section for?**
+  **这一节是干什么的?**
 
-  In this section I'll list some things to try for fun, and learning.
+  在这一节我会列出一些可以尝试的事情，去娱乐或是为了更好的学习
 
-  It is good if you can attempt to do some of these challenges. Some will be easy, while some will be very difficult. For this reason don&#39;t worry if you can&#39;t figure them all out. Some might not even be possible!
+  如果你可以尝试这些挑战会非常好。有一些会比较容易，但是有些会非常困难。所以如果你没有解决它们，不要担心，有些甚至是不可能的！
 
-  Many will require some research on the internet. This is an integral part of learning a new language so should not be avoided. The ability to teach yourself things is one of the most valuable skills in programming. See how many you can complete for each chapter. Move on when you get bored.
+  很多问题需要在网上搜索。这是学习一门新语言不可或缺的一部分，所以不应该被回避。自学能力是最有价值的编程技能之一。看看你每章能完成多少。当你觉得无聊的时候就离开。
+
+ 
 </div>
 
 <div class="alert alert-warning">
   <ul class="list-group">
-    <li class="list-group-item">&rsaquo; Change the `Hello World!` greeting given by your program to something different.</li>
-    <li class="list-group-item">&rsaquo; What happens when no `main` function is given?</li>
-    <li class="list-group-item">&rsaquo; Use the online documentation to lookup the `puts` function.</li>
-    <li class="list-group-item">&rsaquo; Look up how to use `gdb` and run it with your program.</li>
+    <li class="list-group-item">&rsaquo;  在你的程序里将 `Hello World!` 改成其他东西</li>
+    <li class="list-group-item">&rsaquo; 当没有 `main` 函数的时候发生了什么</li>
+    <li class="list-group-item">&rsaquo; 使用在线文档查看 `puts` 函数</li>
+    <li class="list-group-item">&rsaquo; 查查如何使用 `gdb`，并用它调试你的程序 </li>
   </ul>
 </div>
