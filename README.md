@@ -62,24 +62,22 @@ C语言同样是一个学习和获取乐趣的语言。在这些事出现在主�
 我们在这本书里要打造的语言是一个Lisp。这是一个家族的编程语言，它们的特点是所有的计算由*列表(list)*表示。这听起来很可怕。但是其实 Lisp 很是简单，与众不同，和强大的语言。
 
 
-
 ![mike](img/mike.png "Mike Tyson &bull; Your typical Lisp user")
 
 
-Building a Lisp is a great project for so many reasons. It puts you in the shoes of language designers, and gives you an appreciation for the whole process of programming, from language all the way down to machine. It teaches you about functional programming, and different ways to view computation out of the norm. The final product you are rewarded with provides a template for future thoughts and developments, giving you a starting ground for trying new things. It simply isn't possible to comprehend the creativity and cleverness that goes into programming and computer science until you explore languages themselves.
+打造一个 Lisp 是一个很好的工程，原因有很多。这让你作为一个语言设计师， 并且让你可以欣赏编程中到从语言到机器的全过程。它会教你有关函数式编程和一种不同的看待计算范式(computation)的方法。你最终得到的产品将会为你未来的思考和开发提供模板，给你一种开始尝试新事物的方法。在编程和计算机科学的世界不可能理解创造新和聪明除非你探索语言本身。
 
-The type of Lisp we'll be building is one I've invented for the purposes of this book. I've designed it for minimalism, simplicity and clarity, and I've become quite fond of it along the way. I hope you come to like it too. Conceptually, syntactically, and in implementation this brand of Lisp has a number of serious differences to other major brands of Lisp. So much so that I'm sure I will be getting e-mails from Lisp programmers telling me it *isn't a Lisp* because it *doesn't do/have/look-like this or that*.
+我们即将打造的 Lisp 是我为这本书发明的。我把它设计得尽可能简单明了,而且我非常喜欢它前进的道路。我希望你也能够喜欢。从概念上，语法上，和执行上说，这个 Lisp 与其他主流的 Lisp 有很大的不同。这些不同是如此之多以至于我确信我会受到 Lisp 程序员的 e-mail ,他们会告诉我这不是一个 Lisp 因为它不是/没有/看起来不像这样或者那样的东西。
 
-I've not made this Lisp different to confuse beginners or to spread untruths. I've made it different because different is good.
+我对 Lisp 做这些改动不是为了迷惑初学者或者散步不实之词。我之所以改动它是因为这些改动都是好的。
 
-If you are looking to learn about the semantics and behaviours of conventional Lisps, and how to program them, this book may not be for you. What this book offers instead is new and unique concepts, self expression, creativity, and fun. Whatever your motivation, heed this disclaimer now. Not everything I say will be objectively correct or true! You will have to decide that for yourselves.
+如果你正在找书学习常规 Lisp 的语法,特性以及如何用他们编程，那这本书可能不适合你。这本书能提供的是一些新的，独特的角度，自我表达，创造性和乐趣。无论你的动机是什么，*注意这个免责声明。并不是我说的每一件事都是正确的或者真实的！你需要为你自己下决定。*
 
-
-Your own Lisp
+你自己的 Lisp
 -------------
 
-The best way to follow this book is to, as the title says, write *your own* Lisp. If you are feeling confident enough I want you to add your own features, modifications and changes. Your Lisp should suit you and your own philosophy on what is right or true. Throughout the book I'll be giving description and insight, but with it I'll be providing *a lot* of code. This will make it easy to follow along by copy and pasting each section into your program without really understanding. *Please do not do this!*.
+阅读这本书最好的办法，正如标题所说的，写*你自己的* Lisp。如果你足够自信我希望你能够添加自己的特性，修改和变化。你自己的 Lisp 应该切合你自己关于正确的哲学。在这本书中我将给出描述和见解，而且我还会提供*大量*的代码。这会让你很容易地将每一节的代码复制粘贴进自己的程序，即使你一点都不理解。 *请不要这样做！*
 
-Type out each piece of sample code yourself. This is called *The Hard Way*. Not because it is hard technically, but because it requires discipline. By doing things *The Hard Way* you will come to understand the reasoning behind what you are typing. Ideally things will click as you follow it along character by character. When *reading* you may have an intuition as to why it *looks* right, or what *may* be going on, but this will not always translate to a real understanding unless you do the *writing* yourself!
+自己打出每一段简单的代码。这叫*来之不易(The Hard Way)*.并不是因为它是一个艰难(Hard)的技术，而是因为它要求纪律。通过用艰难的方法来做这些事你最终将会理解你所输入的东西背后的原理。理想的情况下，事情将会跟着你字母的节奏变得清晰。当你阅读的时候你可能会有一种直觉，关于它为什么*看起来*是正确的，或者*可能*可行，但这往往都不会真正的被理解除非你自己*写*。
 
-In a perfect world you would use my code as a reference - an instruction booklet and guide as to building the programming language you always dreamed of. In reality this isn't practical or viable. But the base philosophy remains. If you want to change something, do it.
+最理想的情况是你可能会用我的代码作为参考 - 一个指令手册和一门指导如何构建你梦想的语言的书。而事实上这是不可行的。但是基础的理念仍然在。如果你想改变什么，那就去做吧。
