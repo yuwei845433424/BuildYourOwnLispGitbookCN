@@ -1,6 +1,6 @@
 # Summary
 
-* [Installation](installation.md)安装
+* [安装](installation.md)
 * [Basics](basics.md)
 * [Interactive Prompt](interactive_prompt.md)
 * [Languages](languages.md)
